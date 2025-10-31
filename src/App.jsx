@@ -24,14 +24,14 @@ import {
 } from '@mui/icons-material';
 import './App.css';
 
-import useLocalStorage from './hooks/useLocalStorage';
+import useSessionStorage from './hooks/useSessionStorage';
 import { exportEmployees, importEmployees } from './utils/storage';
 import EmployeeTable from './components/EmployeeTable';
 import EmployeeForm from './components/EmployeeForm';
 
 function App() {
   // State management
-  const [employees, setEmployees] = useLocalStorage('employees_v1', []);
+  const [employees, setEmployees] = useSessionStorage('employees_v1', []);
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('name');
   const [sortOrder, setSortOrder] = useState('asc');

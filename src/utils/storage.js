@@ -1,11 +1,11 @@
-// Helper functions for employee data management in localStorage
+// Helper functions for employee data management in sessionStorage
 
 const STORAGE_KEY = 'employees_v1';
 
-// Get all employees from localStorage
+// Get all employees from sessionStorage
 export const getEmployees = () => {
   try {
-    const employees = localStorage.getItem(STORAGE_KEY);
+    const employees = sessionStorage.getItem(STORAGE_KEY);
     return employees ? JSON.parse(employees) : [];
   } catch (error) {
     console.error('Error reading employees:', error);
@@ -13,10 +13,10 @@ export const getEmployees = () => {
   }
 };
 
-// Save employees to localStorage
+// Save employees to sessionStorage
 export const saveEmployees = (employees) => {
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(employees));
+    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(employees));
     return true;
   } catch (error) {
     console.error('Error saving employees:', error);
