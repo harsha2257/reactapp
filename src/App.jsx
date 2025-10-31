@@ -149,7 +149,7 @@ function App() {
                 width: { xs: '100%', md: 'auto' }
               }}
             >
-              Employee Manager
+              Employee Manager - KLU
             </Typography>
 
             {/* Search and Actions Container */}
